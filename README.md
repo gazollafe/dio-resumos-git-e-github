@@ -29,15 +29,33 @@ Clicando com o botão direito na pasta escolhida, abra o Git Bash (terminal de c
 **Clonando repositórios**
 `git clone <URL-do-repositorio> novo-nome` clona um repositório existente para o diretório local e altera seu nome (opcional)
 
-### 3. Salvar alterações no Repositório Local
+### 3. Salvar e desfazer alterações no Repositório Local
+
+**Salvando alterações localmente**
 `touch ARQUIVO.md` cria um arquivo vazio
+`git add ARQUIVO.md` após editar o arquivo, prepara o conteúdo para o próximo commit (para adicionar todos os arquivos editados, só colocar um ponto '.')
+`git commit -m"mensagem"` salva as alterações feitas no repositório
+
+**Desfazendo alterações localmente**
+- Remover o versionamento de pasta caso tenha dado `git init` errado (excluir o diretório .git): `rm -rf .git`
+- Restaurar um arquivo: `git restore arquivo.md`
+- Alterar mensagem do último commit: `git commit --amend -m"nova-msg"`
+- Desfazer o último commit:
+a. `git reset --soft cod_log_commit` os arquivos que estavam nos commits posteriores ao indicado pelo log ficarão na área de preparação (git add)  
+b. `git reset --mixed cod_log_commit` os arquivos que estavam nos commits posteriores ao indicado pelo log não serão reconhecidos, tendo que chamar o `git add` novamente
+c. `git reset --hard cod_log_commit` exclui todos os arquivos que estavam nos commits posteriores ao indicado pelo log.
+- Remover arquivos da área de preparação (`git add`): `git reset nome_do_arquivo.md`
  
 # ⌨️ Comandos do teclado
 **ctrl + L**: limpa a área do terminal
 **Seta para cima**: copia o comando acima
 
 # 👩🏽‍💻 Comandos do terminal
-`git status` 
+`clear`
+`git status`
+`git log`
+`echo "inserir nome da pasta que deseja ignorar" > .gitignore`
+`touch repositorio/.gitkeep` convenção para o git reconhecer o diretório vazio
 
 # 🔎 Dúvidas
 - Qual a diferença entre diretório, repositório e pasta?
@@ -49,4 +67,3 @@ R: A maioria dos outros comandos Git não está disponível fora de um repositó
 - O que é Branch?
 - O que é a pasta .git?
 R: Subdiretório que contém todos os metadados Git necessários para o novo repositório.
-oi
