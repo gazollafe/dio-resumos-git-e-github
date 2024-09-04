@@ -49,3 +49,4 @@ R: A maioria dos outros comandos Git não está disponível fora de um repositó
 - O que é Branch?
 - O que é a pasta .git?
 R: Subdiretório que contém todos os metadados Git necessários para o novo repositório.
+oi
