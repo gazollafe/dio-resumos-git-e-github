@@ -79,3 +79,4 @@ c. `git reset --hard cod_log_commit` exclui todos os arquivos que estavam nos co
 - O que é a pasta .git?
 
 **R:** Subdiretório que contém todos os metadados Git necessários para o novo repositório.
+teste
