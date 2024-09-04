@@ -52,6 +52,8 @@ c. `git reset --hard cod_log_commit` exclui todos os arquivos que estavam nos co
 - `git remote add origin <url-repo-remoto>`
 - `git push -u origin main`
 
+**Baixando alterações do Repositório remoto para o local**
+- `git pull`
  
 # ⌨️ Comandos do teclado
 **ctrl + L**: limpa a área do terminal
